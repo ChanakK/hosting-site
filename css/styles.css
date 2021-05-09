@@ -131,11 +131,9 @@ a {
   color: var(--color-headings);
 }
 
-
-
-.list--inline .list__item{
-display: inline-block; /* added inline block so we can add margin to it*/
-margin-right: 2rem;
+.list--inline .list__item {
+  display: inline-block; /* added inline block so we can add margin to it*/
+  margin-right: 2rem;
 }
 
 .list--tick {
@@ -148,8 +146,29 @@ margin-right: 2rem;
   margin-bottom: 1rem;
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .list--tick .list__item {
     padding-left: 0;
   }
+}
+
+/* Icons */
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon--primary {
+  fill: var(--color-primary);
+}
+
+.icon-container {
+  align-items: center;
+  background: #f3f9fa;
+  border-radius: 100%;
+  display: inline-flex; /*we didn't use block here because we do not want a line break */
+  height: 64px;
+  justify-content: center;
+  width: 64px;
 }
