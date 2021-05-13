@@ -5,10 +5,8 @@
   --color-headings: #1b0760;
   --color-body: #918ca4;
   --color-body-darker: #5c5577;
-  --color-border:#ccc;
+  --color-border: #ccc;
   --border-radius: 30px;
-
-
 }
 
 *,
@@ -216,7 +214,7 @@ a {
   width: 2rem;
   height: 2rem;
   margin-right: 1rem;
-vertical-align: middle;
+  vertical-align: middle;
 }
 
 .btn--primary {
@@ -263,8 +261,8 @@ vertical-align: middle;
 }
 
 .btn--stretched {
-padding-left: 6rem;
-padding-right: 6rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 @media screen (min-width: 1024px) {
@@ -276,7 +274,7 @@ padding-right: 6rem;
 /* Inputs */
 
 .input {
-  border-radius: var(--border-radius) ;
+  border-radius: var(--border-radius);
   border: 1px solid var(--color-border);
   color: var(--color-headings);
   font-size: 2rem;
@@ -290,9 +288,8 @@ padding-right: 6rem;
 
 .input-group {
   border: 1px solid var(--color-border);
-  border-radius: var(--border-radius) ;
+  border-radius: var(--border-radius);
   display: flex;
-  
 }
 
 .input-group .input {
@@ -313,8 +310,6 @@ padding-right: 6rem;
 
 /* Cards */
 .card {
-
-  
   border-radius: 7px;
   box-shadow: 0 0 20px 10px #f3f3f3;
   overflow: hidden;
@@ -343,10 +338,10 @@ padding-right: 6rem;
   background: #02cdf1;
 }
 
-
-
-
 /* Plans */
+.plan {
+  transition: transform 0.2s ease-out;
+}
 .plan__name {
   color: #fff;
   margin: 0;
@@ -376,6 +371,9 @@ padding-right: 6rem;
   margin-bottom: 2rem;
 }
 
+.plan--popular {
+  transform: scale(1.1);
+}
 .plan--popular .card__header {
   position: relative;
 }
@@ -387,6 +385,14 @@ padding-right: 6rem;
   position: absolute;
   top: -6px;
   right: 5%;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan:hover {
+  transform: scale(1.15);
 }
 
 @media screen and (min-width: 1024px) {
@@ -424,7 +430,7 @@ padding-right: 6rem;
   margin-top: 1rem;
 }
 
-/* Quotes */ 
+/* Quotes */
 .quote {
   font-size: 3rem;
   font-style: italic;
@@ -433,19 +439,14 @@ padding-right: 6rem;
 }
 
 .quote__text::before {
-content: open-quote;
-
+  content: open-quote;
 }
 .quote__text::after {
   content: close-quote;
 }
 
-
-
 .quote .media {
-
   font-style: normal;
-
 }
 
 .quote__author {
@@ -456,7 +457,7 @@ content: open-quote;
 
 .quote__organization {
   color: var(--color-headings);
-  opacity: .4;
+  opacity: 0.4;
   font-size: 2rem;
 }
 
@@ -465,18 +466,18 @@ content: open-quote;
   bottom: 10px;
 }
 
-@media screen and (min-width:1024px) {
- .quote {
-   font-size: 2rem;
- } 
+@media screen and (min-width: 1024px) {
+  .quote {
+    font-size: 2rem;
+  }
 
- .quote__author {
-   font-size: 2.4rem;
- }
+  .quote__author {
+    font-size: 2.4rem;
+  }
 
- .quote__organization {
-   font-size: 1.6rem;
- }
+  .quote__organization {
+    font-size: 1.6rem;
+  }
 }
 
 /* Grids */
@@ -484,14 +485,13 @@ content: open-quote;
   display: grid;
 }
 
-@media screen and (min-width:768px){
+@media screen and (min-width: 768px) {
   .grid--1x2 {
-    grid-template-columns: repeat(2,1fr);
-
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -511,13 +511,12 @@ content: open-quote;
 }
 
 .testimonial__image > .icon-container {
- position: absolute;
- top: 3rem;
- right: -32px;
-
+  position: absolute;
+  top: 3rem;
+  right: -32px;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .testimonial .quote,
   .testimonial .quote__author {
     font-size: 2.4rem;
@@ -545,31 +544,27 @@ content: open-quote;
   font-size: 3rem;
 }
 
-
 .callout .btn {
   justify-self: center;
   align-self: center;
-
 }
 
 .callout__content {
   text-align: center;
 }
 
-@media screen and (min-width:768px) {
-  
+@media screen and (min-width: 768px) {
   .callout .grid--1x2 {
     grid-template-columns: 1fr auto;
   }
-  
-  
+
   .callout__content {
     text-align: left;
   }
-.callout .btn {
-  justify-self: start;
-  margin: 0 2rem;
-}  
+  .callout .btn {
+    justify-self: start;
+    margin: 0 2rem;
+  }
 }
 
 /* Collapsibles */
@@ -586,14 +581,14 @@ content: open-quote;
 
 .collapsible__chevron {
   transform: rotate(-90deg);
-  transition: tranform .3s;
+  transition: tranform 0.3s;
 }
 
 .collapsible__content {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .collapsible--expanded .collapsible__chevron {
@@ -603,7 +598,6 @@ content: open-quote;
 .collapsible--expanded .collapsible__content {
   max-height: 100vh;
   opacity: 1;
-
 }
 
 /* Blocks */
@@ -638,7 +632,6 @@ content: open-quote;
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
-
 }
 
 /* Navigation Bar */
@@ -657,14 +650,13 @@ content: open-quote;
 }
 
 .nav__item {
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   border-bottom: 1px solid #222;
-
 }
 
 .nav__item > a {
   color: #d2d0db;
-  transition: color .3s;
+  transition: color 0.3s;
 }
 
 .nav__item > a:hover {
@@ -672,11 +664,10 @@ content: open-quote;
 }
 
 .nav__toggler {
-  opacity: .5;
-  transition: box-shadow .15s  ;
+  opacity: 0.5;
+  transition: box-shadow 0.15s;
   cursor: pointer;
 }
-
 
 .nav.collapsible--expanded .nav__toggler {
   opacity: 1;
@@ -688,11 +679,9 @@ content: open-quote;
   transform: translateY(3px);
 }
 
-
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .nav__toggler {
     display: none;
-
   }
 
   .nav__list {
@@ -708,9 +697,8 @@ content: open-quote;
   }
 }
 
-
 /* Hero */
-.hero__tagline{
+.hero__tagline {
   font-size: 2rem;
   color: #b9c3cf;
   letter-spacing: 1px;
@@ -725,12 +713,11 @@ content: open-quote;
   clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
-@media screen and (min-width:768px) {
-  
-  .hero{
+@media screen and (min-width: 768px) {
+  .hero {
     padding: 0;
   }
-  
+
   .hero__content {
     text-align: left;
     align-self: center;
@@ -739,7 +726,7 @@ content: open-quote;
 
 /* Domain Block */
 .block-domain .input-group {
-  box-shadow: 0 0 30px 20px  #e6ebee;
+  box-shadow: 0 0 30px 20px #e6ebee;
   border: 0;
   margin: 4rem auto;
   max-width: 670px;
@@ -747,8 +734,8 @@ content: open-quote;
 
 .block-domain__prices {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-template-rows: repeat(2,6rem);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
   font-weight: 600;
   justify-items: center;
@@ -756,11 +743,18 @@ content: open-quote;
   margin: 0 auto;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .block-domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
 }
 
+/* Plans Block */
+.block-plans .grid {
+gap: 8rem 4rem;
+}
 
-/* pan */
+.block-plans .card {
+  max-width: 500px;
+  margin: 0 auto;
+}
