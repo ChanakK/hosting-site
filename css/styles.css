@@ -17,6 +17,11 @@
 
 /* Typography */
 
+::selection {
+  background: var(--color-primary);
+  color: #fff;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -46,6 +51,7 @@ h2 {
 
 h3 {
   font-size: 3rem;
+  font-weight: 500;
 }
 
 p {
@@ -121,6 +127,7 @@ a {
 
 .badge--small {
   font-size: 1.6rem;
+  padding: 0.5rem 1.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -149,6 +156,7 @@ a {
 .list--tick {
   list-style-image: url(../images/tick.svg);
   padding-left: 3rem;
+  color: var(--color-headings);
 }
 
 .list--tick .list__item {
@@ -687,7 +695,7 @@ a {
 }
 
 .nav__brand {
-  transform: translateY(3px);
+  transform: translateY(5px);
 }
 
 @media screen and (min-width: 768px) {
@@ -726,7 +734,7 @@ a {
 
 @media screen and (min-width: 768px) {
   .hero {
-    padding: 0;
+    padding-top: 0;
   }
 
   .hero__content {
@@ -822,10 +830,8 @@ a {
 }
 
 .footer a {
-
-    color: #777;
-    transition: 0.3s;
-  
+  color: #777;
+  transition: 0.3s;
 }
 
 .footer__section {
@@ -853,17 +859,14 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
 
-.footer__brand img{
-  width: 100%;
-  max-width: 230 px;
-}
-
-  
+  .footer__brand img {
+    width: 100%;
+    max-width: 230 px;
+  }
 
   .footer a:hover {
     color: #fff;
   }
-
 
   .footer__section .list {
     margin: 0;
